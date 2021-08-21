@@ -1,0 +1,12 @@
+@use './partials/_typography' as *;
+@use './partials/_variables' as *;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'AvenirNext LT Pro';
+    color: $primary-text;
+}

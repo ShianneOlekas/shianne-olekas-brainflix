@@ -1,0 +1,48 @@
+@use '../../partials/_typography' as *;
+@use '../../partials/_variables' as *;
+
+.description {
+    margin: 1rem;
+
+    &__title {
+        font-size: 2rem; 
+        line-height: 2.5rem;
+        font-weight: 700;
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
+
+    &__info {
+        line-height: 1.5rem;
+    }
+}
+
+.upload-info {
+    display: flex;
+    align-items: center;
+
+    &__channel {
+        margin-right: 0.5rem;
+        font-weight: 600;
+    }
+
+    &__date {
+        font-size: 1.25rem;
+        color: $primary-label;
+    }
+}
+
+.video-info {
+    display: flex;
+    padding-bottom: 1rem;
+    font-size: 1.25rem;
+    border-bottom: 1px solid $primary-border;
+
+    &__views {
+        margin-right: 1.5rem;
+    }
+
+    &__icon {
+        margin-right: 0.5rem;
+    }
+}
