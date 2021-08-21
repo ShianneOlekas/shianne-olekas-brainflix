@@ -2,6 +2,7 @@ import './App.scss';
 import Header from './components/Header/Header';
 import Video from './components/Video/Video';
 import Description from './components/Description/Description';
+import Comments from './components/Comments/Comments';
 import videoDetails from './Data/video-details.json';
 import { Component } from 'react';
 
@@ -16,6 +17,7 @@ class App extends Component {
        <Header />
        <Video video={this.state.video}/>
        <Description video={this.state.video}/>
+       <Comments video={this.state.video}/>
       </div>
     );
   }

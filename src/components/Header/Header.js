@@ -1,22 +1,22 @@
 import './Header.scss';
-import Logo from '../../Assets/Logo/Logo-brainflix.svg';
-import Search from '../../Assets/Icons/Icon-search.svg';
-import Upload from '../../Assets/Icons/Icon-upload.svg';
-import Avatar from '../../Assets/Images/Mohan-muruge.jpg';
+import logo from '../../Assets/Logo/Logo-brainflix.svg';
+import search from '../../Assets/Icons/Icon-search.svg';
+import upload from '../../Assets/Icons/Icon-upload.svg';
+import avatar from '../../Assets/Images/Mohan-muruge.jpg';
 
 function Header() {
     return (
         <header className='header'>
-            <img className='header__img' src={Logo} alt=''/>
+            <img className='header__img' src={logo} alt=''/>
             <div className='header__search' >
-                <img className='header__search-img' src={Search} alt=''/>
+                <img className='header__search-img' src={search} alt=''/>
                 <input className='header__search-bar' placeholder='Search'/>
             </div>
             <div className='header__upload'>
                 <div className='header__upload-button'>
-                    <img className='header__upload-logo' src={Upload} alt=''/> <p>UPLOAD</p>
+                    <img className='header__upload-logo' src={upload} alt=''/> <p>UPLOAD</p>
                 </div>
-                <img className='header__upload-img' src={Avatar} alt=''/>
+                <img className='header__upload-img' src={avatar} alt=''/>
             </div>
         </header>
     );
