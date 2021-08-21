@@ -1,0 +1,43 @@
+@use '../../partials/_variables' as *;
+
+.video-list {
+    margin: 1rem;
+
+    &__title {
+        font-size: 12px;
+        line-height: 20px;
+        color: $primary-label;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+}
+
+.next-videos {
+    display: flex;
+    align-items: center;
+    height: 4.375rem;
+    margin-bottom: 1.5rem;
+
+    &__img{
+        width: 28vw;
+        height: 70px;
+        margin-right: 1rem;
+        border-radius: 4px;
+        object-fit: cover;
+    }
+}
+
+.next-info {
+    width: 60%;
+   
+    &__title {
+        font-weight: 600;
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+    }
+
+    &__channel {
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+    }
+}

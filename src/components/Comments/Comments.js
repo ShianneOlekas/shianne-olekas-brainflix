@@ -4,7 +4,7 @@ import '../Comments/Comments.scss'
 
 function Comments({ video }) {
 
-    const name = video.comments.map((data) => (
+    const comment = video.comments.map((data) => (
         <div className='rendered-comments'>
             <img className='rendered-comments__avatar' alt=''/>
             <div>
@@ -29,7 +29,7 @@ function Comments({ video }) {
                 </form>
             </div>
             <article>
-                {name}
+                {comment}
             </article>
         </section>
     );
