@@ -1,7 +1,12 @@
 @use '../../partials/_variables' as *;
+@use '../../partials/_mixins' as *;
 
 .video-list {
     margin: 1rem;
+
+    @include tablet {
+        margin: 0 1.5rem;
+    }
 
     &__title {
         font-size: 12px;
@@ -18,8 +23,12 @@
     height: 4.375rem;
     margin-bottom: 1.5rem;
 
+    @include tablet {
+        width: 50%;
+    }
+
     &__img{
-        width: 28vw;
+        width: 120px;
         height: 70px;
         margin-right: 1rem;
         border-radius: 4px;
@@ -34,10 +43,20 @@
         font-weight: 600;
         font-size: 0.8125rem;
         line-height: 1.125rem;
+
+        @include tablet {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
     }
 
     &__channel {
         font-size: 0.8125rem;
         line-height: 1.125rem;
+
+        @include tablet {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
     }
 }

@@ -19,9 +19,13 @@ class App extends Component {
       <div className="App">
        <Header />
        <Video video={this.state.video} />
-       <Description video={this.state.video} />
-       <Comments video={this.state.video} />
+       <main className='all-video-info'>
+         <article className='description-comments'>
+          <Description video={this.state.video} />
+          <Comments video={this.state.video} />
+        </article>
        <NextVideo nextVideo={this.state.nextVideo} />
+       </main>
       </div>
     );
   }

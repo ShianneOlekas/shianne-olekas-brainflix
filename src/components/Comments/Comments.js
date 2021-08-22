@@ -27,6 +27,7 @@ function Comments({ video }) {
                     <textarea type='text' name='comments' id='comments' className='comment-input__text' placeholder='Write comment here'></textarea>
                     <button className='comment-input__button'>COMMENT</button>
                 </form>
+                <button className='comment-input__button--responsive'>COMMENT</button>
             </div>
             <article>
                 {comment}

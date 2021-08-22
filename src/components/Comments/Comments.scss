@@ -1,9 +1,14 @@
 @use '../../partials/_variables' as *;
 @use '../../partials/_typography' as *;
+@use '../../partials/_mixins' as *;
 
 .comment-section {
     margin: 1rem;
     padding-bottom: 1.5rem;
+
+    @include tablet {
+        margin: 0 1.5rem;
+    }
 
     &__title {
         font-weight: 600;
@@ -15,7 +20,12 @@
     display: flex;
     justify-content: center;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid $primary-border;;
+    border-bottom: 1px solid $primary-border;
+
+    @include tablet {
+        align-items: center;
+        justify-content: space-between;
+    }
 
     &__avatar {
         height: 3rem;
@@ -31,6 +41,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+
+    @include tablet {
+        margin-right: 1rem;
+    }
 
     &__label {
         font-size: 12px;
@@ -49,6 +63,12 @@
         font-family: 'AvenirNext LT Pro';
         resize: none;
         color: $primary-text;
+
+        @include tablet {
+            font-size: 1rem;
+            height: 3.5rem;
+            width: 100%;
+        }
     }
 
     &__button {
@@ -58,6 +78,28 @@
         color: white;
         border: none;
         border-radius: 4px;
+
+        @include tablet {
+            display: none;
+        }
+
+        &--responsive {
+            display: none;
+
+            @include tablet {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1rem;
+                margin-right: 2.5rem;
+                height: 3rem;
+                width: 10rem;
+                background-color: $brainflix-cta;
+                color: white;
+                border: none;
+                border-radius: 4px;
+            }
+        }
         
     }
 }
@@ -86,8 +128,17 @@
     align-items: center;
     justify-content: space-between;
 
+    @include tablet {
+        justify-content: inherit;
+    }
+
     &__name {
         font-weight: 600;
+
+        @include tablet {
+            margin-right: 1rem;
+            font-size: 1.1rem;
+        }
     }
 
     &__date {

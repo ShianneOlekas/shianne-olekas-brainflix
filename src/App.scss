@@ -1,0 +1,9 @@
+@use './partials/_mixins' as *;
+
+.all-video-info {
+    
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+    }
+}
