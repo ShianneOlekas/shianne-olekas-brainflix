@@ -5,7 +5,7 @@ import '../Comments/Comments.scss'
 function Comments({ video }) {
 
     const comment = video.comments.map((data) => (
-        <div className='rendered-comments'>
+        <div className='rendered-comments' key={data.id}>
             <img className='rendered-comments__avatar' alt=''/>
             <div>
                 <div className='comment-data'>

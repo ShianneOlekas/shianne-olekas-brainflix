@@ -2,7 +2,7 @@ import './Video.scss'
 
 function Video({ video }) {
     return (
-        <video poster={video.image} className='video' controls></video>
+        <video poster={video.image} src='' className='video' controls></video>
     );
 }
 

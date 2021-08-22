@@ -1,12 +1,12 @@
 import './NextVideo.scss'
 
-function NextVideo({ nextVideo }) {
-    const videos = nextVideo.map((video) => (
-        <div className='next-videos' >
-           <img className='next-videos__img' src={video.image} alt=''/>
+function NextVideo({ video, nextVideo, selectedVideo }) {
+    const videos = nextVideo.filter((data) => video.id !== data.id).map((thumbnail) => (
+        <div className='next-videos' key={thumbnail.id} onClick={() => {selectedVideo(thumbnail.id) }}>
+           <img className='next-videos__img' src={thumbnail.image} alt=''/>
             <div className='next-info' >
-                <h3 className='next-info__title' >{video.title}</h3>
-                <p className='next-info__channel'>{video.channel}</p>
+                <h3 className='next-info__title' >{thumbnail.title}</h3>
+                <p className='next-info__channel'>{thumbnail.channel}</p>
             </div>
         </div>
         ))

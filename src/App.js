@@ -14,7 +14,15 @@ class App extends Component {
     nextVideo: videos
   }
 
+  findNextVideo = (selected) => {
+    const foundVideo = videoDetails.find((video) => selected === video.id);
+    this.setState({
+      video: foundVideo,
+    });
+  };
+
   render() {
+
     return (
       <div className="App">
        <Header />
@@ -24,7 +32,7 @@ class App extends Component {
           <Description video={this.state.video} />
           <Comments video={this.state.video} />
         </article>
-       <NextVideo nextVideo={this.state.nextVideo} />
+       <NextVideo nextVideo={this.state.nextVideo} selectedVideo={this.findNextVideo} video={this.state.video}/>
        </main>
       </div>
     );

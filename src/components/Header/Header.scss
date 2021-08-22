@@ -2,6 +2,12 @@
 @use '../../partials/_typography' as *;
 @use '../../partials/_mixins' as *;
 
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $brainflix-cta;
+    border-radius: 4px;
+}
+
 .header {
     height: 10.56rem;
     padding: 1rem;
@@ -14,6 +20,10 @@
         align-items: center;
         height: 5rem;
     }
+
+    @include desktop {
+        margin: 0 11.25rem;
+    }
     
     &__img{
         height: 2rem;
@@ -23,6 +33,10 @@
             margin: 0;
             margin-right: 16%;
             margin-left: 1.5rem;
+        }
+
+        @include desktop {
+            margin-right: 25%;
         }
     }
 
@@ -77,6 +91,14 @@
             padding: 1rem;
             padding-right: 1.5rem;
             align-items: center;
+        }
+
+        @include desktop {
+            width: 65%;
+        }
+
+        &:hover {
+            background-color: $instock-cta-hover;
         }
     }
 

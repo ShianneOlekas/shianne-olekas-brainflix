@@ -14,8 +14,13 @@
         @include tablet {
             display: flex;
             justify-content: space-between;
-            border-bottom: 1px solid $primary-border;
-            
+            border-bottom: 1px solid $primary-border;   
+        }
+
+        @include desktop {
+            align-items: end;
+            margin-right: 2rem;
+            border-bottom: none;
         }
     }
 

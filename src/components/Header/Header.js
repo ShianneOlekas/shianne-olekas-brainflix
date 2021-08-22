@@ -14,7 +14,8 @@ function Header() {
             </div>
             <div className='header__upload'>
                 <div className='header__upload-button'>
-                    <img className='header__upload-logo' src={upload} alt=''/> <p>UPLOAD</p>
+                    <img className='header__upload-logo' src={upload} alt=''/> 
+                    <p>UPLOAD</p>
                 </div>
                 <img className='header__upload-img' src={avatar} alt=''/>
             </div>

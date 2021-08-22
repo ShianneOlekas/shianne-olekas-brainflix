@@ -27,6 +27,10 @@
         width: 50%;
     }
 
+    @include desktop {
+        width: 135%;
+    }
+
     &__img{
         width: 120px;
         height: 70px;
