@@ -14,6 +14,7 @@ class App extends Component {
     nextVideo: videos
   }
 
+ // to find the video that is clicked on which is then filtered out in the NextVideo component 
   findNextVideo = (selected) => {
     const foundVideo = videoDetails.find((video) => selected === video.id);
     this.setState({
@@ -22,7 +23,6 @@ class App extends Component {
   };
 
   render() {
-
     return (
       <div className="App">
        <Header />
