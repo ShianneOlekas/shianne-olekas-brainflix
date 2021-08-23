@@ -2,13 +2,17 @@
 
 .video {
     width: 100vw;
+    max-height: 18rem;
+    object-fit: cover;
 
     @include tablet {
         padding: 0 3rem;
         background-color: black;
+        max-height: 25rem;
     }
 
     @include desktop {
         padding: 0 16rem;
+        max-height: 33.75rem;
     }
 }
