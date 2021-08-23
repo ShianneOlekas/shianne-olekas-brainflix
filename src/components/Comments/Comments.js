@@ -19,7 +19,7 @@ function Comments({ video }) {
 
     return (
         <section className='comment-section'>
-            <h2 className='comment-section__title'>3 Comments</h2>
+            <h2 className='comment-section__title'>{video.comments.length} comments</h2>
             <div className='form'>
                 <img className='form__avatar' src={avatar} alt=''/>
                 <form className='comment-input'>
