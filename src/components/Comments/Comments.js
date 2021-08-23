@@ -3,7 +3,7 @@ import { timestamp } from '../../Utils/timestamp';
 import '../Comments/Comments.scss'
 
 function Comments({ video }) {
-
+//map through the video-details data 
     const comment = video.comments.map((data) => (
         <div className='rendered-comments' key={data.id}>
             <img className='rendered-comments__avatar' alt=''/>
@@ -16,6 +16,7 @@ function Comments({ video }) {
             </div>
         </div>
         ))
+
 
     return (
         <section className='comment-section'>
