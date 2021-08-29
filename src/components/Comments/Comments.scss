@@ -52,11 +52,10 @@ textarea:focus {
     }
 
     &__label {
-        font-size: 12px;
-        line-height: 20px;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
         color: $primary-label;
         font-weight: 600;
-
     }
 
     &__text {

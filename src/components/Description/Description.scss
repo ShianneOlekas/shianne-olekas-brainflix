@@ -9,6 +9,10 @@
         margin: 0 1.5rem;
     }
 
+    @include desktop {
+        margin: 0;
+    }
+
     &__info-container {
         
         @include tablet {
@@ -20,7 +24,8 @@
         @include desktop {
             align-items: end;
             margin-right: 2rem;
-            border-bottom: none;
+            margin-right: 0;
+            padding-right: 2rem;
         }
     }
 

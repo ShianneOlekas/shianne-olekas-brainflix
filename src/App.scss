@@ -1,4 +1,5 @@
 @use './partials/_mixins' as *;
+@use './partials/_variables' as *;
 
 .all-video-info {
     
@@ -7,4 +8,9 @@
         flex-direction: row;
         margin: 0 11.25rem;
     }
+}
+
+a {
+    text-decoration: none;
+    color: $primary-text;
 }

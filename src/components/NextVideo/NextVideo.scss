@@ -8,12 +8,22 @@
         margin: 0 1.5rem;
     }
 
+    @include desktop {
+        border-left: 1px solid $primary-border;
+        padding-left: 2rem;
+        margin-left: 0;
+    }
+
     &__title {
         font-size: 12px;
         line-height: 20px;
         color: $primary-label;
         font-weight: 600;
         margin-bottom: 2rem;
+
+        @include desktop {
+            margin-top: 2rem;
+        }
     }
 }
 
