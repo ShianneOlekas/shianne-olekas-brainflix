@@ -29,7 +29,6 @@ class Upload extends Component {
             <div className='button'>
               <button className='button__publish' type='submit'>PUBLISH</button>
               <button className='button__cancel'>CANCEL</button>
-              {/* testing commits */}
           </div>
           </form>
         </section>

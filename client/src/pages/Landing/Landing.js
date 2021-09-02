@@ -4,7 +4,6 @@ import Comments from '../../components/Comments/Comments';
 import NextVideo from '../../components/NextVideo/NextVideo';
 import { Component } from 'react';
 import axios from 'axios';
-import { API_KEY } from '../../Utils/api'
 
 class Landing extends Component {
   state = {
@@ -14,10 +13,11 @@ class Landing extends Component {
 
   getVideoId(id) {
     axios
-    .get(`https://project-2-api.herokuapp.com/videos/${id}${API_KEY}`)
+    .get(`http://localhost:8080/videos/${id}`)
     .then((response) => {
+      console.log(response);
         this.setState({
-          video: response.data,
+          video: response.data
         });
     });
   }
@@ -27,7 +27,7 @@ class Landing extends Component {
         this.getVideoId(this.props.match.params.id);
     } else {
         axios
-        .get(`https://project-2-api.herokuapp.com/videos${API_KEY}`)
+        .get('http://localhost:8080/videos')
         .then((response) => {
             this.getVideoId(response.data[0].id);
         });
@@ -36,11 +36,14 @@ class Landing extends Component {
 
   componentDidMount() {
     axios
-    .get(`https://project-2-api.herokuapp.com/videos${API_KEY}`)
+    .get('http://localhost:8080/videos')
     .then((response) => {
-      this.setState({
-        nextVideos: response.data
-      });
+      console.log(response);
+      if(response.status === 200) {
+        return this.setState({
+          nextVideos: response.data
+        });
+      }
     })
     this.getVideo()
   }
