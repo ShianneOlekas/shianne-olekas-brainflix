@@ -16,7 +16,7 @@ class App extends Component {
               <Route path='/' exact component={Landing} />
               <Route path='/videos' exact component={Landing} />
               <Route path='/videos/:id' component={Landing} />
-              <Route path='/upload' component={Upload} />
+              <Route path='/upload' render = {props => <Upload {...props}/>} />
             </Switch>
         </div>
       </BrowserRouter>

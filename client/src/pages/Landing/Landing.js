@@ -56,12 +56,8 @@ class Landing extends Component {
 }
 
   render() {
-    if (this.state.nextVideos === undefined) {
-      return <p>video does not exist</p>
-    }
-
-    if (this.state.video === undefined) {
-      return <p>video does not exist</p>
+    if (this.state.nextVideos.length === 0 || this.state.video.length === 0) {
+      return <p>loading</p>
     }
 
     const removeVideo = this.state.nextVideos.filter(

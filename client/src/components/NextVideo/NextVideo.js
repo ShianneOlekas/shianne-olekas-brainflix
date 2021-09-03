@@ -2,7 +2,7 @@ import './NextVideo.scss'
 import { Link } from 'react-router-dom';
 
 function NextVideo({ nextVideos }) {
-
+    
     function scrollToTop() {
         window.scrollTo(0,0)
     }
