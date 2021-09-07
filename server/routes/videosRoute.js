@@ -29,7 +29,6 @@ router.get('/', (_req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    console.log(req.params.id);
     try {
         const videoData = getVideoData().find(video => video.id === req.params.id)
     return res.status(200).json(videoData)
@@ -43,7 +42,7 @@ router.post('/', (req, res) => {
         id: uniqid(),
         title: req.body.title,
         channel: 'AnaBanana',
-        image: '',
+        image: 'http://localhost:8080/images/Upload-video-preview.jpg',
         description: req.body.description,
         views: '702',
         likes: '3',
@@ -57,7 +56,9 @@ router.post('/', (req, res) => {
 
     updatedVideoList.push(uploadVideo);
 
-    res.json(updatedVideoList);
+    fs.writeFileSync(commentsFilePath, JSON.stringify(updatedVideoList));
+
+    return res.json(uploadVideo);
 })
 
 module.exports = router;

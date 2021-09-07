@@ -15,7 +15,6 @@ class Landing extends Component {
     axios
     .get(`http://localhost:8080/videos/${id}`)
     .then((response) => {
-      console.log(response);
         this.setState({
           video: response.data
         });

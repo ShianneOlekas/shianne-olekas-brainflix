@@ -1,12 +1,26 @@
+import axios from 'axios';
 import thumbnail from '../../Assets/Images/Upload-video-preview.jpg'
 import './Upload.scss';
 
 function Upload(props) {
   const submitForm = (e) => {
     e.preventDefault()
-    alert('Uploading your super awesome video...')
-    props.history.push('/'); 
+
+    const newVideo = {
+      title: e.target.title.value,
+      description: e.target.description.value,
+    }
+
+    axios
+      .post('http://localhost:8080/videos', newVideo)
+      .then((response) => {
+        console.log(response);
+        alert('Uploading your super awesome video...')
+        props.history.push('/'); 
+      })
   }
+
+
 
     return (
       <main className='main'>
