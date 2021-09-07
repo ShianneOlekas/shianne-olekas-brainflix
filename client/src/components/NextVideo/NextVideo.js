@@ -8,8 +8,9 @@ function NextVideo({ nextVideos }) {
     }
 
     const videoRendered = nextVideos?.map((nextVideo) => (
-        <Link to={`/videos/${nextVideo.id}`} key={nextVideo.id}>
-            <div className='next-videos' onClick={scrollToTop}>
+        <Link to={`/videos/${nextVideo.id}`} key={nextVideo.id}
+        onClick={scrollToTop}>
+            <div className='next-videos'>
                 <img className='next-videos__img' src={nextVideo.image} alt=''/>
                 <div className='next-info' >
                     <h3 className='next-info__title' >{nextVideo.title}</h3>

@@ -8,8 +8,7 @@ const commentsFilePath = './data/video-details.json';
 const getVideoData = () => {
     const fileContent = fs.readFileSync(commentsFilePath)
     const parsedFileContent = JSON.parse(fileContent)
-    return parsedFileContent;
-    
+    return parsedFileContent; 
 }
 
 router.get('/', (_req, res) => {
